@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 export const navigation = [
     { name: 'Strategies', href: '/strategies' },
     { name: 'Setups', href: '/setups' },
@@ -14,7 +14,7 @@ export const NavigationBar = (...props) => {
         baseClass += current ? ' bg-green-700' : ' hover:bg-green-800';
         return (
             <a key={name} href={href} className={baseClass} aria-current={current ? 'page' : 'false'}>
-                {name}
+                <Link to={href}>{name}</Link>
             </a>
         );
     };
@@ -25,7 +25,7 @@ export const NavigationBar = (...props) => {
                     <div className="hidden flex-grow sm:block sm:ml-6">
                         <div className="flex space-x-4 justify-center mr-16">
                             <h1 className="lg:block h-auto w-auto flex-shrink font-bold text-white text-lg font-sans self-center antialiased ">
-                                iGP Statistics
+                                <Link to="/">iGP Statistics</Link>
                             </h1>
                             {navigation.map((nav) => aGenerator(nav))}
                         </div>
