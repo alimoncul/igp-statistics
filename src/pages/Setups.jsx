@@ -6,7 +6,9 @@ export default function Setups() {
         <Store>
             <NavigationBar />
             <main style={{ padding: '1rem 0' }}>
-                <h2>Setups</h2>
+                <h1 className="font-bold text-center text-white" style={{ fontSize: 40 }}>
+                    Setups | Coming soon
+                </h1>
             </main>
         </Store>
     );

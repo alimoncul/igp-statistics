@@ -8,12 +8,11 @@ function App() {
     return (
         <Store>
             <NavigationBar />
-            <Tyre type="SUPERSOFT" />
-            <Tyre type="SOFT" />
-            <Tyre type="MEDIUM" />
-            <Tyre type="HARD" />
-            <Tyre type="INTERMEDIATE" />
-            <Tyre type="WET" />
+            <div>
+                <h1 className="font-bold text-center text-white" style={{ fontSize: 40 }}>
+                    Welcome to iGP Statistics
+                </h1>
+            </div>
         </Store>
     );
 }

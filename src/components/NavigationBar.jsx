@@ -13,9 +13,9 @@ export const NavigationBar = (...props) => {
         let baseClass = 'text-white px-3 py-2 rounded-md text-sm font-medium';
         baseClass += current ? ' bg-green-700' : ' hover:bg-green-800';
         return (
-            <a key={name} href={href} className={baseClass} aria-current={current ? 'page' : 'false'}>
-                <Link to={href}>{name}</Link>
-            </a>
+            <Link key={name} to={href} className={baseClass} aria-current={current ? 'page' : 'false'}>
+                {name}
+            </Link>
         );
     };
     return (
