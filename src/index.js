@@ -21,7 +21,7 @@ render(
                 path="*"
                 element={
                     <main style={{ padding: '1rem' }}>
-                        <p>There's nothing here!</p>
+                        <p>There's nothing here! We couldn't had any time for not found page :(</p>
                     </main>
                 }
             />

@@ -6,7 +6,7 @@ export default function RaceAnalysis() {
         <Store>
             <NavigationBar />
             <main style={{ padding: '1rem 0' }}>
-                <h1 className="font-bold text-center text-white" style={{ fontSize: 40 }}>
+                <h1 className="font-bold text-center text-black" style={{ fontSize: 40 }}>
                     RaceAnalysis | Coming soon
                 </h1>
             </main>
