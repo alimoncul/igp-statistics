@@ -1,0 +1,17 @@
+{
+	"history": [
+		{
+			"version": "0.1.0",
+			"date": "06.12.2021",
+			"header": "🌟 Version 0.1.0 | 04.12.2021",
+			"description": "I like history",
+			"list": [
+				"🧱 React-router structure",
+				"🧱 History structure",
+				"⚙️Headerbar component",
+				"⚙️History component",
+				"⚙️Separator component"
+			]
+		}
+	]
+}
