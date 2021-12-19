@@ -1,13 +1,12 @@
 import { NavigationBar } from '../components/NavigationBar';
 import { HistoryFragment } from '../components/HistoryFragment';
-import Store from '../Store';
 import { history } from '../datas/history.json';
 import moment from 'moment';
 import { DATE_FORMAT, LONG_DATE_FORMAT } from '../constants/date';
 
 export default function Main() {
     return (
-        <Store>
+        <div>
             <NavigationBar />
             <main className="pl-4 pr-4">
                 <h1 className="font-bold text-center text-black text-5xl m-4">Welcome to iGP Statistics</h1>
@@ -24,6 +23,6 @@ export default function Main() {
                     })}
                 </div>
             </main>
-        </Store>
+        </div>
     );
 }
