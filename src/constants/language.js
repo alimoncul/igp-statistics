@@ -1,0 +1,27 @@
+export const SELECT_TRACK = 'Select a track';
+export const TRACK_LIST = [
+    'Australia',
+    'Malaysia',
+    'China',
+    'Bahrain',
+    'Spain',
+    'Monaco',
+    'Turkey',
+    'Germany',
+    'Hungary',
+    'Europe',
+    'Belgium',
+    'Italy',
+    'Singapore',
+    'Japan',
+    'Brazil',
+    'Abu Dhabi',
+    'Great Britain',
+    'France',
+    'Austria',
+    'Canada',
+    'Azerbaijan',
+    'Mexico',
+    'Russia',
+    'USA'
+];
