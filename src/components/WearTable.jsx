@@ -1,48 +1,47 @@
 import React from 'react';
 import { Tyre } from './Tyre';
+import wearColor from '../lib/wearColor';
+const tableClass = 'border px-1 py-1';
 
 export const WearTable = (props) => {
     const wears = props.wears;
     const maximumColumnCount = props.maximumColumnCount;
     const tableHeads = [];
-    const tableClass = 'border px-1 py-1';
-    for (let i = 0; i < maximumColumnCount; i++) {
+    const tableRows = [];
+    const wearsExists = wears.filter((w) => w.table.length);
+    wearsExists.forEach((wear) => {
+        const tyre = wear.tyre;
         tableHeads.push(
-            <th key={`Lap ${i + 1}`} className={tableClass}>
-                Lap {i + 1}
+            <th key={tyre} className={tableClass}>
+                <Tyre textClass={'text-sm'} sizeBuffer={0} tyre={tyre} />
             </th>
         );
-    }
+    });
 
-    const tableRows = wears
-        .filter((w) => w.table.length)
-        .map((wear) => {
-            const tyre = wear.tyre;
+    for (let i = 0; i < maximumColumnCount; i++) {
+        const tds = [
+            <td key={i} className={tableClass}>
+                Lap {i}
+            </td>
+        ];
+
+        wearsExists.forEach((wear) => {
             const table = wear.table;
-            const tableDatas = [];
-            for (let i = 0; i < maximumColumnCount; i++) {
-                tableDatas.push(
-                    <td key={`td-${tyre}-${i}`} className={tableClass}>
-                        {table[i] || '-'}
-                    </td>
-                );
-            }
-            return (
-                <tr key={`tr${tyre}`}>
-                    <td className={tableClass}>
-                        <Tyre textClass={'text-sm'} sizeBuffer={0} tyre={tyre}></Tyre>
-                    </td>
-                    {tableDatas}
-                </tr>
+            tds.push(
+                <td style={{ backgroundColor: wearColor(table[i] || 0) }} key={`${wear.tyre}-${i}`} className={tableClass}>
+                    {table[i] || '-'}
+                </td>
             );
         });
+        tableRows.push(<tr key={`row${i}`}>{tds}</tr>);
+    }
 
     return tableRows.length ? (
         <div className="self-center flex-col">
             <table className="table-auto border text-center text-xs">
                 <thead>
                     <tr>
-                        <th className={tableClass}>Tyres/Laps</th>
+                        <th className={tableClass}>Laps/Tyres</th>
                         {tableHeads}
                     </tr>
                 </thead>
