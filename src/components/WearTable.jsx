@@ -21,7 +21,7 @@ export const WearTable = (props) => {
     for (let i = 0; i < maximumColumnCount; i++) {
         const tds = [
             <td key={i} className={tableClass}>
-                Lap {i}
+                Lap {i + 1}
             </td>
         ];
 
