@@ -1,0 +1,8 @@
+export const TYRE_LIST = {
+    SUPERSOFT: 'SUPERSOFT',
+    SOFT: 'SOFT',
+    MEDIUM: 'MEDIUM',
+    HARD: 'HARD',
+    INTERMEDIATE: 'INTERMEDIATE',
+    WET: 'WET'
+};
