@@ -1,6 +1,12 @@
 {
 	"history": [
 		{
+			"version": "0.3.0",
+			"date": "29.01.2022",
+			"description": "Strategies are here! You can calculate tyre strategies now.",
+			"list": ["🧱 Strategies", "⚙️ CardInfo component", "⚙️ WearInput component", "⚙️ WearTable component"]
+		},
+		{
 			"version": "0.2.0",
 			"date": "19.12.2021",
 			"description": "Setups are here!",
