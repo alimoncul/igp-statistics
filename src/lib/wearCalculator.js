@@ -1,7 +1,7 @@
 export function calculateWear(wearPerLap) {
     let wear = 100;
     let laps = [];
-    if (wearPerLap === 0) {
+    if (wearPerLap <= 0) {
         return [];
     }
     while (wear > 0) {
