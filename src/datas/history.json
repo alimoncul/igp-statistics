@@ -1,6 +1,12 @@
 {
 	"history": [
 		{
+			"version": "0.4.0",
+			"date": "10.04.2022",
+			"description": "Race results are here! You can upload results.csv and see the graphics.",
+			"list": ["🧱 Race Results", "⚙️ FileUploadButton component"]
+		},
+		{
 			"version": "0.3.0",
 			"date": "29.01.2022",
 			"description": "Strategies are here! You can calculate tyre strategies now.",
